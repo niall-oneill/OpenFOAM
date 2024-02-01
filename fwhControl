@@ -1,0 +1,27 @@
+Farassat1A-Patch
+{
+        type            FfowcsWilliamsHawkings;
+        formulationType Farassat1AFormulation;
+        #include        "commonSettings";
+        patches (walls);
+        interpolationScheme cell;
+
+        surfaces
+        (
+                cylinder
+                {
+                    type            patch;
+                    patches         (walls);
+                    interpolate     false;
+                }
+        );
+        cleanFreq       100;
+        fixedResponseDelay false;
+        responseDelay   0.003; 
+        nonUniformSurfaceMotion false;
+        Ufwh    (.0 .0 .0);
+        U0      (.0 .0 .0);
+}
+
+
+
